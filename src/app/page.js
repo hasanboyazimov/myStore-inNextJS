@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const getData = async () => {
   const req = await fetch("https://dummyjson.com/products");
@@ -11,7 +13,7 @@ async function Home() {
   const { data } = await getData();
   return (
     <div className="w-[100%] max-w-[1200px] mx-auto">
-      <h1 className="text-3xl mb-10">Products</h1>
+      <Navbar />
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
         {data.products.map((prod) => {
           return (
@@ -36,6 +38,7 @@ async function Home() {
           );
         })}
       </div>
+      <Footer />
     </div>
   );
 }

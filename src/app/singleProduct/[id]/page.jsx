@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,6 +15,7 @@ async function SingleProduct({ params }) {
 
   return (
     <div className="w-full mx-auto max-w-[1200px] h-screen">
+      <Navbar />
       <div className="card bg-base-100 w-[1000px] shadow-xl mx-auto p-[30px]">
         <div className="flex flex-row justify-between">
           <figure className="w-1/2">
@@ -34,10 +37,10 @@ async function SingleProduct({ params }) {
           <p className="">{data.description}</p>
         </div>
         <div className="flex justify-end mt-[30px]">
-          
           <button className="btn btn-primary">Buy Now</button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
