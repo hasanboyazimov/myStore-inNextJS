@@ -1,11 +1,8 @@
-import Link from "next/link";
-import React from "react";
-
 function Navbar() {
   return (
-    <div className="navbar bg-base-100 mb-[100px]">
+    <div className="navbar bg-base-100">
       <div className="flex-1">
-        <Link href="/" className="btn btn-ghost text-xl">Sifatli Shop</Link>
+        <a className="btn btn-ghost text-xl">daisyUI</a>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-end">
